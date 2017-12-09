@@ -4,7 +4,7 @@ OBJECTIVES
 - build a prototype
 
 
-will's walk through
+-- will's demo --
 const connectObject = {
   host: "localhost",
   port: 3306,
@@ -26,3 +26,69 @@ connection.connect(function(error){
 
   console.log("Connected as ID: ${connection.threadID}")
 })
+^^ how do you run this program in the command line?
+  - create directory called mysqlDemo
+  - run command: npm init // creates a package.json
+  - npm install mySql
+  - node demo.js
+  - it'll show as an error bc there is no user or Password
+  - still not going to work because the database ice_creamDB is not actually a database
+  - mycli -uroot ....
+  - will work now
+
+  [INSTRUCTIONS]
+  Throughout this class we are going to be working on creating an application that takes in music data to create personalized playlists
+
+Make sure to get as far as you can over the course of these assignments as the coding you do here will be extremely useful to you when you begin working on the homework
+For now we will simply be creating your database in MySQL and then creating a connection to said database using Node.
+Remember, you must create a database before attempting to connect to it. Doing otherwise will return an error.
+
+--
+this is just bit and pieces of notes below:
+
+connect.query("select * from products", function(error,response){
+  if (error) {
+    throw error
+  }
+  console.log(response)
+})
+connection.connect
+--
+
+[INSTRUCTIONS]
+
+
+Using the connection and song data you put together earlier into the class,
+we are going to print playlists to the Git Bash console based upon the genre or artist.
+
+First create code that prints all songs within your database to the terminal.
+
+Now create code that prints songs of a specific genre/artist to the terminal.
+
+If you don't have many songs in your database at this point in time,
+take this moment to add some more to it. Try to give yourself a variety of songs to work with.
+
+HINT: Remember that you can call specific data using SQL commands we went over last class.
+If you are having trouble, make sure to look into SQL commands once more.
+
+
+CRUD: basis of most web applications
+CREATE
+READE
+UPDATE
+DELETE
+
+
+how to create a database and table
+DROP DATABASE IF EXISTS musicDB;
+
+create database musicDB;
+use musicDB;
+
+create table music (
+ID int auto_increment,
+title varchar (100),
+artist varchar(100),
+genre varchar(100),
+primary key(ID)
+);

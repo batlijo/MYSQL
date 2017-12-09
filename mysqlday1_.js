@@ -95,28 +95,10 @@ VALUES ("Sally", TRUE, "Stevie",)
 --
 UPDATE people
 SET has_pet = true, pet_name = "Franklin", pet_age = 2
-WHERE name = "Peter"; --this is a condition
+WHERE name = "Peter"; --this is a conditional
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Select * from people;
+[ see how many peters exist in the database]
 
 
 */
